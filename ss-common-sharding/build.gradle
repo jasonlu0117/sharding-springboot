@@ -1,0 +1,17 @@
+
+
+dependencies {
+    compile project(":ss-common")
+    compile('org.apache.commons:commons-lang3:3.8.1')
+    compile("mysql:mysql-connector-java:5.1.48")
+    compile("com.alibaba:druid-spring-boot-starter:1.2.1")
+    compile("com.baomidou:mybatis-plus:3.3.0")
+    compile("com.baomidou:mybatis-plus-boot-starter:3.3.0")
+    compile("com.baomidou:dynamic-datasource-spring-boot-starter:3.2.1")
+    compile("org.springframework.boot:spring-boot-starter-cache")
+    compile("org.springframework.boot:spring-boot-starter-data-redis")
+    compile("org.springframework.boot:spring-boot-starter-aop")
+    compile("org.springframework.cloud:spring-cloud-context")
+    compile("org.apache.shardingsphere:sharding-jdbc-spring-boot-starter:4.1.1")
+    compile("org.apache.shardingsphere:sharding-jdbc-spring-namespace:4.1.1")
+}

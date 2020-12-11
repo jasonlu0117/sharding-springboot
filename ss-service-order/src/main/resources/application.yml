@@ -1,0 +1,28 @@
+server:
+  port: 8600
+  tomcat:
+    max-threads: 30
+    min-spare-threads: 20
+
+spring:
+  application:
+    name: ss-service-order
+  profiles:
+    active: local
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  main:
+    allow-bean-definition-overriding: true
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  typeAliasesPackage: com.jl.ss.sharding.entity
+  global-config:
+    id-type: 1
+    field-strategy: 1
+    db-column-underline: true
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true

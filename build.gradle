@@ -1,0 +1,55 @@
+group 'com.jl'
+version '1.0-SNAPSHOT'
+
+def bootProjects = [
+        project(':ss-service-order')
+]
+
+subprojects {
+
+    version '1.0.0'
+
+    apply plugin: 'java'
+    apply plugin: 'java-library'
+    apply plugin: 'idea'
+    apply plugin: "io.spring.dependency-management"
+
+    def vJavaLang = '1.8'
+
+    targetCompatibility = vJavaLang
+    sourceCompatibility = vJavaLang
+
+    repositories {
+        mavenLocal()
+        jcenter()
+        maven { url "https://maven.aliyun.com/repository/public/" }
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+            mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Greenwich.SR3'
+        }
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+
+}
+
+configure(bootProjects) {
+    apply plugin: 'org.springframework.boot'
+}
+
+buildscript {
+    ext {
+        springBootVersion = '2.1.10.RELEASE'
+    }
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}

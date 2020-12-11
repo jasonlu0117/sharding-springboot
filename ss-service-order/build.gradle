@@ -1,0 +1,10 @@
+
+
+dependencies {
+    compile project(":ss-common")
+    compile project(":ss-common-sharding")
+    compile("com.fasterxml.jackson:jackson-parent:2.8")
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile('org.springframework.session:spring-session-data-redis')
+}

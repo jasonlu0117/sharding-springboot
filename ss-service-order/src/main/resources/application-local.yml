@@ -1,0 +1,32 @@
+spring:
+  shardingsphere:
+    datasource:
+      names: order0,order1,order2,order3
+      order0:
+        url: jdbc:mysql://localhost:3306/ds_order_0?allowMultiQueries=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+        username: root
+        password: "root"
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        type: com.alibaba.druid.pool.DruidDataSource
+      order1:
+        url: jdbc:mysql://localhost:3306/ds_order_1?allowMultiQueries=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+        username: root
+        password: "root"
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        type: com.alibaba.druid.pool.DruidDataSource
+      order2:
+        url: jdbc:mysql://localhost:3306/ds_order_2?allowMultiQueries=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+        username: root
+        password: "root"
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        type: com.alibaba.druid.pool.DruidDataSource
+      order3:
+        url: jdbc:mysql://localhost:3306/ds_order_3?allowMultiQueries=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+        username: root
+        password: "root"
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        type: com.alibaba.druid.pool.DruidDataSource
+
+logging:
+  level:
+    com.jl: debug

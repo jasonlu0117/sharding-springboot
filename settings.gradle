@@ -1,0 +1,5 @@
+rootProject.name = 'sharding-springboot'
+include 'ss-common'
+include 'ss-common-sharding'
+include 'ss-service-order'
+
